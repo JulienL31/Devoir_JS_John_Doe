@@ -23,7 +23,7 @@ function Portfolio() {
       <Row>
         {projects.map((proj, idx) => (
           <Col md={4} className="mb-4" key={idx}>
-            <Card className="h-100 shadow-sm border-0 project-card">
+            <Card className="h-100 shadow-sm border-0 project-card" >
               <Card.Img variant="top" src={proj.img} alt={proj.title} />
               <Card.Body>
                 <Card.Title>{proj.title}</Card.Title>

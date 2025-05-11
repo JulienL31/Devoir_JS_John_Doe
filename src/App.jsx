@@ -10,19 +10,23 @@ import MentionsLegales from './pages/MentionsLegales';
 
 function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
-      <Header />
-      <main className="flex-fill">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Header /> {/* Pas dans un container */}
+      
+      <div className="d-flex flex-column min-vh-100 bg-dark text-white">
+        <main className="container-lg flex-grow-1 py-4">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+          </Routes>
+        </main>
+      </div>
+      
+      <Footer /> {/* Pas dans un container */}
+    </>
   );
 }
 
