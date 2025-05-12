@@ -48,16 +48,16 @@ function Home() {
 
             {/* Colonne compétences réduite */}
             <Col md={8} className="d-flex justify-content-center">
-              <div style={{ maxWidth: '500px', width: '100%' }}>
+              <div style={{ maxWidth: '650px', width: '100%' }}>
                 <h4 className="mb-4">Mes compétences</h4>
                 <p>HTML / CSS</p>
-                <ProgressBar now={90} label="90%" className="mb-3" />
+                <ProgressBar now={90} label="90%" className="mb-3" variant="primary" />
                 <p>JavaScript</p>
-                <ProgressBar now={80} label="80%" className="mb-3" />
+                <ProgressBar now={80} label="80%" className="mb-3" variant="success" />
                 <p>React</p>
-                <ProgressBar now={75} label="75%" className="mb-3" />
+                <ProgressBar now={75} label="75%" className="mb-3" variant="info" />
                 <p>Bootstrap</p>
-                <ProgressBar now={85} label="85%" className="mb-3" />
+                <ProgressBar now={85} label="85%" className="mb-3" variant="warning" />
               </div>
             </Col>
           </Row>
