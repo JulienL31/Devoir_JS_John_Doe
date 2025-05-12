@@ -11,23 +11,26 @@ import MentionsLegales from './pages/MentionsLegales';
 function App() {
   return (
     <>
-      <Header /> {/* Pas dans un container */}
-      
-      <div className="d-flex flex-column min-vh-100 bg-dark text-white">
-        <main className="container-lg flex-grow-1 py-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/mentions-legales" element={<MentionsLegales />} />
-          </Routes>
-        </main>
-      </div>
-      
-      <Footer /> {/* Pas dans un container */}
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+        <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
+        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        <Route path="/mentions-legales" element={<PageWrapper><MentionsLegales /></PageWrapper>} />
+      </Routes>
+
+      <Footer />
     </>
   );
 }
+
+// Composant wrapper optionnel pour les autres pages
+const PageWrapper = ({ children }) => (
+  <main className="container-lg py-4">
+    {children}
+  </main>
+);
 
 export default App;
