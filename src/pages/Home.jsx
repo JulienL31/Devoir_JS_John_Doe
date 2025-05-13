@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Button, ProgressBar } from 'react-bootstrap';
 import ModalGithub from '../components/ModalGithub';
-import heroImg from '../assets/images/hero-bg.jpg';
+import heroImg from '../assets/images/hero-bg.jpg'; // utilisation désuète car utilisation dans le CSS avec modification directe, je laisse si besoin pour plus tard
 import johnImg from '../assets/images/john-doe-about.jpg';
 import '../index.css';
 
