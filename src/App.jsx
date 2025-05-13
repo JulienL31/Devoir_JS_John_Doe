@@ -10,19 +10,21 @@ import MentionsLegales from './pages/MentionsLegales';
 
 function App() {
   return (
-    <>
+    <div className="d-flex flex-column min-vh-100">
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-        <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
-        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-        <Route path="/mentions-legales" element={<PageWrapper><MentionsLegales /></PageWrapper>} />
-      </Routes>
+      <main className="flex-fill">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+        </Routes>
+      </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

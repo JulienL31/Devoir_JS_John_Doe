@@ -10,29 +10,23 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section */}
-      <div className="position-relative w-100" style={{ height: '100vh', overflow: 'hidden' }}>
-        {/* Image de fond avec assombrissement */}
-        <div
-          style={{
-            backgroundImage: `url(${heroImg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            filter: 'brightness(0.5)',
-            height: '100%',
-            width: '100%',
-          }}
-        ></div>
 
-        {/* Texte centré au-dessus de l’image */}
-        <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
-          <h1 className="display-3 fw-bold">Bienvenue !</h1>
-          <h2 className="mb-4">Je suis John DOE, développeur web</h2>
-          <button className="btn btn-primary">En savoir plus</button>
+      {/* IMAGE Section */}
+      <div className="hero-section position-relative">
+        <div className="hero-overlay" />
+        <div className="hero-content text-center text-white position-absolute top-50 start-50 translate-middle">
+          <h1 className="display-3 fw-bold">Bonjour, je suis John Doe</h1>
+          <h2 className="fw-semibold">Développeur web full stack</h2>
+
+          <button className="btn btn-danger mt-5" onClick={() => setShowModal(true)}> En savoir plus </button>
+          <ModalGithub show={showModal} handleClose={() => setShowModal(false)} />
+
         </div>
       </div>
 
+
       {/* Présentation Section */}
+
       <Container className="py-5">
         <div className="p-4 bg-light rounded shadow text-dark">
           <Row className="align-items-center">
@@ -46,7 +40,9 @@ function Home() {
               </p>
             </Col>
 
+
             {/* Colonne compétences réduite */}
+
             <Col md={8} className="d-flex justify-content-center">
               <div style={{ maxWidth: '650px', width: '100%' }}>
                 <h4 className="mb-4">Mes compétences</h4>
@@ -65,6 +61,7 @@ function Home() {
       </Container>
 
       {/* Modale GitHub */}
+
       <ModalGithub show={showModal} handleClose={() => setShowModal(false)} />
     </>
   );
